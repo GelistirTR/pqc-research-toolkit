@@ -1,0 +1,20 @@
+{
+  "version": "0.3.0-alpha.12",
+  "node": "24.22.1",
+  "openssl": "3.5.9",
+  "schedule": "all-byte-values in structural fields; fixed bit mutations elsewhere",
+  "cases": {
+    "fileStructural": 4741,
+    "fileAuthentication": 1717,
+    "lateFileAuthentication": 456,
+    "vaultStructural": 7299,
+    "vaultAuthentication": 34
+  },
+  "totalCases": 14247,
+  "structuralArgonCalls": 0,
+  "structuralDecapsulationCalls": 0,
+  "totalArgonCalls": 37,
+  "totalDecapsulationCalls": 2143,
+  "elapsedMs": 121417,
+  "limits": "Bounded mutation corpus with fresh local containers; not coverage-guided fuzzing, cryptanalysis or a security audit"
+}

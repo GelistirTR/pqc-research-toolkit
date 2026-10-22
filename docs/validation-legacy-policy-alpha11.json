@@ -1,0 +1,28 @@
+{
+  "version": "0.3.0-alpha.11",
+  "baseline": {
+    "toolkit": "0.3.0-alpha.7",
+    "node": "24.16.0"
+  },
+  "reader": {
+    "node": "24.22.1",
+    "openssl": "3.5.9"
+  },
+  "results": [
+    {
+      "kind": "kem",
+      "defaultRejectsCombined": true,
+      "explicitMigrationMatchesBaselinePin": true,
+      "resealedStrictReadable": true,
+      "legacyOperationPassed": true
+    },
+    {
+      "kind": "signing",
+      "defaultRejectsCombined": true,
+      "explicitMigrationMatchesBaselinePin": true,
+      "resealedStrictReadable": true,
+      "legacyOperationPassed": true
+    }
+  ],
+  "limits": "Actual prior synthetic runtime fixtures; explicit seed-authoritative migration only, no companion consistency or future-provider guarantee"
+}

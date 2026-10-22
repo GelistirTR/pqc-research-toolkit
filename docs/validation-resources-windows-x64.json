@@ -1,0 +1,96 @@
+{
+  "version": "0.3.0-alpha.11",
+  "node": "24.22.1",
+  "openssl": "3.5.9",
+  "platform": "win32",
+  "arch": "x64",
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+  "samplesPerCase": 1,
+  "memorySamplingIntervalMs": 10,
+  "cases": [
+    {
+      "mode": "files",
+      "sizeMiB": 32,
+      "concurrent": 1,
+      "fileChunkBytes": 1048576,
+      "baselineRssBytes": 49061888,
+      "sampledPeakRssBytes": 121257984,
+      "lifetimeMaxRssKiB": 122588,
+      "phases": {
+        "encrypt": {
+          "elapsedMs": 116.77,
+          "cpuUserMs": 78,
+          "cpuSystemMs": 16
+        },
+        "decrypt": {
+          "elapsedMs": 130.36,
+          "cpuUserMs": 78,
+          "cpuSystemMs": 16
+        }
+      },
+      "roundtripVerified": true
+    },
+    {
+      "mode": "files",
+      "sizeMiB": 128,
+      "concurrent": 1,
+      "fileChunkBytes": 1048576,
+      "baselineRssBytes": 48988160,
+      "sampledPeakRssBytes": 130560000,
+      "lifetimeMaxRssKiB": 127500,
+      "phases": {
+        "encrypt": {
+          "elapsedMs": 398.8,
+          "cpuUserMs": 203,
+          "cpuSystemMs": 219
+        },
+        "decrypt": {
+          "elapsedMs": 566.86,
+          "cpuUserMs": 297,
+          "cpuSystemMs": 234
+        }
+      },
+      "roundtripVerified": true
+    },
+    {
+      "mode": "files",
+      "sizeMiB": 32,
+      "concurrent": 2,
+      "fileChunkBytes": 1048576,
+      "baselineRssBytes": 49160192,
+      "sampledPeakRssBytes": 132923392,
+      "lifetimeMaxRssKiB": 133972,
+      "phases": {
+        "encrypt": {
+          "elapsedMs": 242.17,
+          "cpuUserMs": 156,
+          "cpuSystemMs": 109
+        },
+        "decrypt": {
+          "elapsedMs": 215.75,
+          "cpuUserMs": 156,
+          "cpuSystemMs": 125
+        }
+      },
+      "roundtripVerified": true
+    },
+    {
+      "mode": "vault",
+      "sizeMiB": null,
+      "concurrent": 2,
+      "fileChunkBytes": null,
+      "baselineRssBytes": 49102848,
+      "sampledPeakRssBytes": 184688640,
+      "lifetimeMaxRssKiB": 180360,
+      "phases": {
+        "openSixVaults": {
+          "elapsedMs": 328.64,
+          "cpuUserMs": 953,
+          "cpuSystemMs": 672
+        }
+      },
+      "roundtripVerified": true
+    }
+  ],
+  "limits": "Local synthetic smoke measurements in independent child processes; no hard RSS ceiling, percentile estimate, DoS or side-channel assurance. Lifetime maxRSS includes setup/hashing; sampled RSS can miss spikes. CPU and disk cache/load affect results."
+}

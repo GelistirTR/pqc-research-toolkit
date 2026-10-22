@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-22",
+  "baselineCommit": "5758d2f",
+  "runtimeTransition": {
+    "from": "Node 24.16.0 / OpenSSL 3.5.6",
+    "to": "Node 24.22.1 / OpenSSL 3.5.9"
+  },
+  "results": [
+    {
+      "reader": {
+        "toolkit": "0.3.0-alpha.8",
+        "node": "24.22.1",
+        "openssl": "3.5.9"
+      },
+      "direction": "legacy vault/file/signature -> updated reader",
+      "checks": [
+        "KEM vault restore",
+        "signature vault restore",
+        "multi-chunk file decrypt",
+        "ML-DSA signature verify"
+      ],
+      "passed": true
+    },
+    {
+      "reader": {
+        "toolkit": "0.3.0-alpha.7",
+        "node": "24.16.0",
+        "openssl": "3.5.6"
+      },
+      "direction": "updated file/signature -> legacy reader with existing vault",
+      "checks": [
+        "KEM vault restore",
+        "signature vault restore",
+        "multi-chunk file decrypt",
+        "ML-DSA signature verify"
+      ],
+      "passed": true
+    }
+  ],
+  "newVaultOnLegacyReader": {
+    "accepted": false,
+    "errorCode": "INVALID_VAULT",
+    "reason": "Legacy bytewise PKCS8 re-export equality rejects seed-only representation; upgrade the reader."
+  },
+  "limits": "Synthetic local fixtures only; seed is authoritative for legacy both inputs; no full companion consistency or future-provider compatibility claim."
+}

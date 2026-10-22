@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "version": "0.1.0-alpha.1",
+    "status": "experimental-unaudited",
+    "kem": "ML-KEM-1024",
+    "signature": "ML-DSA-87",
+    "kdf": "HKDF-SHA-512",
+    "aead": "AES-256-GCM",
+    "maxMessageBytes": 16777216,
+    "maxAadBytes": 65536,
+    "maxKdfContextBytes": 512,
+    "maxSignatureContextBytes": 255,
+    "encryptionUsesPerHandle": 1
+  },
+  "node": "24.16.0",
+  "openssl": "3.5.6",
+  "platform": "win32",
+  "arch": "x64",
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+  "note": "Local smoke benchmark, sequential async calls with callback/threadpool overhead; not cryptanalysis.",
+  "results": {
+    "ML-KEM-1024.KeyGen": {
+      "samples": 30,
+      "medianMs": 0.10649999999999693,
+      "p95Ms": 0.18769999999999953
+    },
+    "ML-KEM-1024.Encaps": {
+      "samples": 30,
+      "medianMs": 0.06389999999999674,
+      "p95Ms": 0.09409999999999741
+    },
+    "ML-KEM-1024.Decaps": {
+      "samples": 30,
+      "medianMs": 0.0969000000000051,
+      "p95Ms": 0.18179999999999552
+    },
+    "ML-DSA-87.KeyGen": {
+      "samples": 30,
+      "medianMs": 0.2815000000000083,
+      "p95Ms": 0.39860000000000184
+    },
+    "ML-DSA-87.Sign-1KiB": {
+      "samples": 30,
+      "medianMs": 0.6714000000000055,
+      "p95Ms": 1.656800000000004
+    },
+    "ML-DSA-87.Verify-1KiB": {
+      "samples": 30,
+      "medianMs": 0.22849999999999682,
+      "p95Ms": 0.27309999999999945
+    },
+    "AES-256-GCM.OneShot-1KiB-including-keygen": {
+      "samples": 30,
+      "medianMs": 0.028700000000000614,
+      "p95Ms": 0.05310000000000059
+    }
+  }
+}

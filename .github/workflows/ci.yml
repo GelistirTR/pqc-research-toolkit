@@ -1,0 +1,32 @@
+name: Core checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24.22.1'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run check
+      - run: npm run typecheck
+      - run: npm run test:coverage
+      - run: npm run demo
+      - run: npm run demo:files
+      - run: npm run demo:message
+      - run: npm run demo:passwords
+      - run: npm run test:package
+      - run: npm run fuzz:formats
+      - if: runner.os == 'Windows'
+        run: npm run build:windows-portable

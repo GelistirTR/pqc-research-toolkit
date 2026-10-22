@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.png binary
+/third_party/node-v24.16.0/LICENSE.txt -text
+/third_party/node-v24.16.0/SHASUMS256.txt -text
+/third_party/node-v24.22.1/LICENSE.txt -text
+/third_party/node-v24.22.1/SHASUMS256.txt -text

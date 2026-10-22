@@ -1,0 +1,17 @@
+node_modules/
+coverage/
+*.log
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+target/
+*.pqvault
+*.pqc
+.pqc-stage-*/
+*.vault
+*.tgz
+.artifacts/
+/microsoft-store-kayit.png

@@ -1,0 +1,58 @@
+{
+  "name": "pqc-research-core",
+  "version": "0.3.0-alpha.12",
+  "private": true,
+  "description": "Experimental developer cryptography SDK with post-quantum primitives, key vaults and bounded operations",
+  "repository": { "type": "git", "url": "https://github.com/GelistirTR/pqc-research-toolkit.git" },
+  "homepage": "https://github.com/GelistirTR/pqc-research-toolkit#readme",
+  "bugs": { "url": "https://github.com/GelistirTR/pqc-research-toolkit/issues" },
+  "type": "module",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "bin": { "pqc": "./bin/pqc.mjs" },
+  "engines": {
+    "node": ">=24.22.1 <25"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "files": [
+    "bin",
+    "src",
+    "docs",
+    "examples",
+    "README.md",
+    "SECURITY.md",
+    "LICENSE",
+    "THIRD-PARTY-NOTICES.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:coverage": "node --test --experimental-test-coverage test/*.test.js",
+    "check": "node scripts/check.mjs",
+    "release:check": "node scripts/release-check.mjs",
+    "release:history": "node scripts/release-history.mjs",
+    "test:package": "node scripts/package-smoke.mjs",
+    "fuzz:formats": "node scripts/fuzz-formats.mjs",
+    "build:windows-portable": "node scripts/build-windows-portable.mjs",
+    "test:windows-portable": "node scripts/test-windows-portable.mjs",
+    "typecheck": "tsc --project tsconfig.json",
+    "demo": "node examples/roundtrip.mjs",
+    "demo:files": "node examples/file-roundtrip.mjs",
+    "demo:message": "node examples/sdk-message-roundtrip.mjs",
+    "demo:passwords": "node examples/account-passwords.mjs",
+    "cli": "node bin/pqc.mjs",
+    "benchmark": "node scripts/benchmark.mjs",
+    "benchmark:resources": "node scripts/benchmark-resources.mjs",
+    "fixtures:refresh": "node scripts/refresh-nist-fixtures.mjs"
+  },
+  "devDependencies": {
+    "@noble/hashes": "2.4.0",
+    "@noble/post-quantum": "0.7.1",
+    "@types/node": "24.10.0",
+    "typescript": "5.9.3"
+  }
+}

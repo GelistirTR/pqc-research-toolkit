@@ -1,0 +1,14 @@
+{
+  "version": "24.16.0",
+  "platform": "win32",
+  "arch": "x64",
+  "binaryUrl": "https://nodejs.org/dist/v24.16.0/win-x64/node.exe",
+  "binarySha256": "b3094d0b49f9ad602262a9921551737bb97637c05dd357a06ae98188d7290aa3",
+  "checksumsUrl": "https://nodejs.org/dist/v24.16.0/SHASUMS256.txt",
+  "checksumsSha256": "e20ebbf68d33f42d196a7a11b8a91d422fa37b759c0a51aa4857977135cc5e95",
+  "licenseUrl": "https://raw.githubusercontent.com/nodejs/node/v24.16.0/LICENSE",
+  "licenseSha256": "4573185d56580da2b890ba34a85a409257640f1c5632eade4300137266194d18",
+  "observedPublisher": "OpenJS Foundation",
+  "verifiedDate": "2026-10-22",
+  "verification": "Installed binary SHA-256 matched the official HTTPS checksum text; Windows Authenticode status Valid, publisher OpenJS Foundation. Detached GPG checksum signature was not verified. No runtime binary is committed here."
+}
